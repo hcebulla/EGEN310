@@ -1,1 +1,63 @@
+<!This document creates the framework for the web page that will control the RC car.
+ Author: Hannah Cebulla
+ Date: 11/20/2019
+ >
 
+<html>
+
+<!Establishing the connection between the Python funcitons and the HTML buttons>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript"> 
+$('#left').click(function(){
+	$.ajax({
+	type: "POST", "GET", 
+	url: "~/web-server/controlApp.py",
+	});
+	});
+$('#right').click(function(){
+	$.ajax({
+	type: "POST", "GET", 
+	url: "~/web-server/controlApp.py",
+	});
+	});
+$('#stop').click(function(){
+	$.ajax({
+	type: "POST", "GET", 
+	url: "~/web-server/controlApp.py",
+	});
+	});
+$('#forward').click(function(){
+	$.ajax({
+	type: "POST", "GET", 
+	url: "~/web-server/controlApp.py",
+	});
+	});
+$('#reverse').click(function(){
+	$.ajax({
+	type: "POST", "GET", 
+	url: "~/web-server/controlApp.py",
+	});
+	});
+$('#center').click(function(){
+	$.ajax({
+	type: "POST", "GET", 
+	url: "~/web-server/controlApp.py",
+	});
+	});	
+
+	</script>
+<body>
+
+		<h1>EGEN 310 CONTROL APP</h1>
+
+		<!Creating the buttons>
+
+		<a href="/on" class = "button">FORWARD</a>
+		<a href="/on" class = "button">LEFT</a>
+		<a href="/on" class = "button">CENTER</a>
+		<a href="/on" class = "button">RIGHT</a>
+		<a href="/on" class = "button">REVERSE</a>
+		<a href="/on" class = "button">STOP</a>
+	</body>
+</html>
